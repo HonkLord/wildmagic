@@ -17,7 +17,7 @@ The Wild Magic Surge Automator is a Foundry VTT module that automates the proces
 
 1. In Foundry VTT, navigate to the "Add-on Modules" tab in the Configuration and Setup menu.
 2. Click the "Install Module" button and enter the following URL in the "Manifest URL" field:
-   `[Your module's manifest URL here]`
+   https://raw.githubusercontent.com/HonkLord/wildmagic/main/module.json
 3. Click "Install" to add the module to your Foundry VTT setup.
 
 ## Configuration
@@ -49,8 +49,9 @@ Once configured, the module will automatically:
 
 ## Compatibility
 
-- Tested with Foundry VTT version 0.8.6 up to version 9.
+- Tested with Foundry VTT version 10 and above (verified up to version 12.331)
 - Requires the D&D 5e system for Foundry VTT.
+- Dependencies: lib-wrapper, midi-qol
 
 ## Known Issues
 
@@ -64,7 +65,7 @@ As this is an initial release (Version 0.1), you may encounter some bugs or inco
 
 ## Support
 
-This module is currently in active development. If you encounter any issues or have suggestions for improvements, please file an issue on the [GitHub repository](Your GitHub repository URL here). Your feedback is crucial in helping us improve the module.
+This module is currently in active development. If you encounter any issues or have suggestions for improvements, please file an issue on the [GitHub repository](https://github.com/HonkLord/wildmagic). Your feedback is crucial in helping us improve the module.
 
 ## License
 
@@ -72,7 +73,7 @@ This module is currently in active development. If you encounter any issues or h
 
 ## Credits
 
-Developed by [Your Name/Username]
+Developed by HonkLord
 
 ## Changelog
 
