@@ -2,7 +2,7 @@
   "name": "wildmagic",
   "title": "Wild Magic Surge Automator",
   "description": "Automatically checks for and resolves Wild Magic Surges for sorcerers.",
-  "version": "0.1",
+  "version": "0.1.1",
   "compatibility": {
     "minimum": "10",
     "verified": "12.331"

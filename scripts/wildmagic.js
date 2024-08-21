@@ -66,11 +66,12 @@ class WildMagicSurge {
 
   static async checkWildMagicSurge(actor) {
     const wildMagicDC = game.settings.get("wildmagic", "wildMagicDC") || 1;
-    // Create a Roll instance
-    const roll = new Roll("1d20");
 
-    // Show the roll to the user
-    const rollResult = await roll.roll({ async: false });
+    // Create a Roll instance and evaluate it asynchronously
+    const roll = new Roll("1d20");
+    const rollResult = await roll.evaluate(); // No async option needed, this is asynchronous by default
+
+    // Show the roll result in the chat
     await roll.toMessage({
       flavor: `${actor.name} - Wild Magic Surge Check`,
       speaker: ChatMessage.getSpeaker({ actor: actor }),
@@ -95,14 +96,13 @@ class WildMagicSurge {
 
         await ChatMessage.create({
           content: `<p><strong>${actor.name}</strong> triggers a Wild Magic Surge!</p>
-                    <p>Roll Result: ${rollResult.total}</p>
-                    <p><strong>Wild Magic Effect (${surgeTable.name}):</strong> ${surgeEffect}</p>`,
+                  <p>Roll Result: ${rollResult.total}</p>
+                  <p><strong>Wild Magic Effect (${surgeTable.name}):</strong> ${surgeEffect}</p>`,
           speaker: ChatMessage.getSpeaker({ actor: actor }),
         });
       } else {
         ui.notifications.error(`Wild Magic Surge table not found.`);
       }
-    } else {
     }
   }
 }

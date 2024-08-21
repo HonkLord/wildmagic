@@ -77,7 +77,11 @@ Developed by HonkLord
 
 ## Changelog
 
-### Version 0.1 (Current)
+### Version 0.1.1 (Current)
+
+- Fixed error with Async Rolling (Deprectiated Feature)
+
+### Version 0.1
 
 - Initial beta release
 - Implemented core Wild Magic Surge automation
