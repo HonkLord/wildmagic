@@ -1,0 +1,45 @@
+#wildmagic-config {
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 5px;
+  }
+
+  #selectedActorsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  #selectedActorsList li {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .remove-actor {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+  }
+
+  button[type="submit"] {
+    margin-top: 10px;
+  }
+}

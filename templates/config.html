@@ -1,0 +1,36 @@
+<form id="wildmagic-config">
+  <h2>Wild Magic Surge Configuration</h2>
+  <div class="form-group">
+    <label for="wildMagicDC">Wild Magic Surge DC:</label>
+    <input type="number" id="wildMagicDC" name="wildMagicDC" value="{{wildMagicDC}}">
+  </div>
+  <div class="form-group">
+    <label for="selectedTable">Selected Wild Magic Table:</label>
+    <select id="selectedTable" name="selectedTable">
+      {{#each tables}}
+        <option value="{{this.id}}" {{#if (eq ../selectedTable this.id)}}selected{{/if}}>{{this.name}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="actorSelect">Add Affected Actor:</label>
+    <select id="actorSelect">
+      <option value="">-- Select an Actor --</option>
+      {{#each actors}}
+        <option value="{{this.id}}">{{this.name}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Selected Actors:</label>
+    <ul id="selectedActorsList">
+      {{#each selectedActors}}
+        <li>
+          {{this.name}}
+          <button type="button" class="remove-actor" data-id="{{this.id}}">-</button>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <button type="submit">Save Changes</button>
+</form>
